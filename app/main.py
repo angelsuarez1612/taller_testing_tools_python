@@ -8,8 +8,8 @@ from app.serializers.operation import Operation
 app = FastAPI()
 
 
-@app.post('/maths/calculate', response_model=int, responses={400: {'description': 'Mathematical error'}})
-def calculate(op: Operation) -> int:
+@app.post('/maths/calculate', response_model=float, responses={400: {'description': 'Mathematical error'}})
+def calculate(op: Operation) -> float:
     calculator = Calculator()
 
     try:
