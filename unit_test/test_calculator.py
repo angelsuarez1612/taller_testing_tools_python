@@ -11,7 +11,7 @@ def calculator() -> Calculator:
     ((1, 2, 'add'), 3),
     ((1, 2, 'subtraction'), -1),
     ((1, 2, 'multiplication'), 2),
-    ((1, 2, 'division'), 0),
+    ((1, 2, 'division'), 0.5),
 ])
 def test_calculate(operation, result_expected, calculator: Calculator):
     result = calculator.calculate(*operation)
