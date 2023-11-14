@@ -2,7 +2,7 @@ from app.exceptions import OperationDoesntExist, MathematicalException
 
 
 class Calculator:
-    _OPERATIONS = {
+    OPERATIONS = {
         'add': '+',
         'subtraction': '-',
         'multiplication': '*',
@@ -11,7 +11,7 @@ class Calculator:
 
     def get_expression(self, num1: float, num2: float, operation: str) -> str:
         try:
-            opr: str = self._OPERATIONS[operation]
+            opr: str = self.OPERATIONS[operation]
         except KeyError:
             raise OperationDoesntExist('The operation cannot be found')
 
